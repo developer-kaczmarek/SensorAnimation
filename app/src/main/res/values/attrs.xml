@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="starViewStyle" format="reference" />
+
+    <declare-styleable name="StarView">
+        <attr name="starStrokeWidth" format="dimension" />
+        <attr name="starGap" format="dimension" />
+        <attr name="starCorners" format="dimension" />
+    </declare-styleable>
+
+    <style name="Widget.StarView" parent="@android:style/Widget">
+        <item name="starStrokeWidth">1dp</item>
+        <item name="starGap">20dp</item>
+        <item name="starCorners">50dp</item>
+    </style>
+</resources>
