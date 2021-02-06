@@ -10,4 +10,16 @@
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/PrimaryBackgroundColor</item>
     </style>
+
+    <!--ErrorAlertDialogTheme-->
+    <style name="ErrorAlertDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="android:textColor">@color/PrimaryColor</item>
+        <item name="android:textColorPrimary">@color/PrimaryColor</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonDialogStyle</item>
+        <item name="android:windowBackground">@color/PrimaryBackgroundColor</item>
+    </style>
+
+    <style name="PositiveButtonDialogStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/StarViewPrimaryColor</item>
+    </style>
 </resources>

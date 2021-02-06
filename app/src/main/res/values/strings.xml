@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SensorAnimation</string>
+
+    <string name="error_positive_action">Понятно</string>
+    <string name="error_title">\u0020Произошла ошибка</string>
+    <string name="error_description_sensor_manager_not_found">SensorManager не найден. Основная функция приложения не будет работать. Приносим свои извинения.</string>
+    <string name="error_description_tilt_sensor_not_found">На устройстве отсутствуют один или несколько необходимых датчиков для ориентации в пространстве. Основная функция приложения не будет работать. Приносим свои извинения.</string>
 </resources>

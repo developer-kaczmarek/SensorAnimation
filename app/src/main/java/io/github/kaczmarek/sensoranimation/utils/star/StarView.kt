@@ -17,13 +17,13 @@ import kotlin.math.roundToInt
 import kotlin.math.sin
 
 class StarView @JvmOverloads constructor(
-    context: Context,
-    attrs: AttributeSet? = null,
-    defStyleAttr: Int = R.attr.starViewStyle
+        context: Context,
+        attrs: AttributeSet? = null,
+        defStyleAttr: Int = R.attr.starViewStyle
 ) : View(context, attrs, defStyleAttr), TiltListener {
 
     private var waveGap =
-        TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20f, this.resources.displayMetrics)
+            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20f, this.resources.displayMetrics)
 
     private var maxRadius = 0f
 
@@ -38,9 +38,9 @@ class StarView @JvmOverloads constructor(
     private val starAccentColor = ContextCompat.getColor(context, R.color.StarViewPrimaryColor)
 
     private val gradientColors = intArrayOf(
-        starAccentColor,
-        modifyAlpha(starAccentColor, 0.50f),
-        modifyAlpha(starAccentColor, 0.05f)
+            starAccentColor,
+            modifyAlpha(starAccentColor, 0.50f),
+            modifyAlpha(starAccentColor, 0.05f)
     )
 
     private val starPaint = Paint(Paint.ANTI_ALIAS_FLAG)
@@ -112,12 +112,12 @@ class StarView @JvmOverloads constructor(
         initialRadius = w / waveGap
 
         gradientPaint.shader = RadialGradient(
-            center.x,
-            center.y,
-            w / 2f,
-            gradientColors,
-            null,
-            Shader.TileMode.CLAMP
+                center.x,
+                center.y,
+                w / 2f,
+                gradientColors,
+                null,
+                Shader.TileMode.CLAMP
         )
     }
 
@@ -132,9 +132,9 @@ class StarView @JvmOverloads constructor(
     }
 
     private fun createStarPath(
-        radius: Float,
-        path: Path = Path(),
-        points: Int = 20
+            radius: Float,
+            path: Path = Path(),
+            points: Int = 20
     ): Path {
         path.reset()
         val pointDelta = 0.7f
@@ -142,17 +142,17 @@ class StarView @JvmOverloads constructor(
         val startAngleInRadians = 0.0
 
         path.moveTo(
-            center.x + (radius * pointDelta * cos(startAngleInRadians)).toFloat(),
-            center.y + (radius * pointDelta * sin(startAngleInRadians)).toFloat()
+                center.x + (radius * pointDelta * cos(startAngleInRadians)).toFloat(),
+                center.y + (radius * pointDelta * sin(startAngleInRadians)).toFloat()
         )
 
         for (i in 1 until points) {
             val hypotenuse = if (i % 2 == 0) pointDelta * radius else radius
 
             val nextPointX =
-                center.x + (hypotenuse * cos(startAngleInRadians - angleInRadians * i)).toFloat()
+                    center.x + (hypotenuse * cos(startAngleInRadians - angleInRadians * i)).toFloat()
             val nextPointY =
-                center.y + (hypotenuse * sin(startAngleInRadians - angleInRadians * i)).toFloat()
+                    center.y + (hypotenuse * sin(startAngleInRadians - angleInRadians * i)).toFloat()
             path.lineTo(nextPointX, nextPointY)
         }
 
@@ -172,10 +172,10 @@ class StarView @JvmOverloads constructor(
      */
     private fun modifyAlpha(@ColorInt color: Int, factor: Float): Int {
         return Color.argb(
-            (Color.alpha(color) * factor).roundToInt(),
-            Color.red(color),
-            Color.green(color),
-            Color.blue(color)
+                (Color.alpha(color) * factor).roundToInt(),
+                Color.red(color),
+                Color.green(color),
+                Color.blue(color)
         )
     }
 }

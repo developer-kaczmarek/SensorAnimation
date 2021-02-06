@@ -42,8 +42,8 @@ class DeviceTiltSensor(context: Context) : SensorEventListener, TiltSensor {
                 SensorManager.getRotationMatrixFromVector(rotationMatrix, event.values)
                 SensorManager.getOrientation(rotationMatrix, orientationAngles)
                 val pair = Pair(
-                    orientationAngles[1].toDouble() * -1,
-                    orientationAngles[2].toDouble()
+                        orientationAngles[1].toDouble() * -1,
+                        orientationAngles[2].toDouble()
                 )
                 listeners.forEach { tiltListener ->
                     tiltListener.onTilt(pair)
@@ -60,9 +60,9 @@ class DeviceTiltSensor(context: Context) : SensorEventListener, TiltSensor {
 
     override fun register() {
         sensorManager?.registerListener(
-            this,
-            rotationVectorSensor,
-            SensorManager.SENSOR_DELAY_NORMAL
+                this,
+                rotationVectorSensor,
+                SensorManager.SENSOR_DELAY_NORMAL
         )
     }
 
