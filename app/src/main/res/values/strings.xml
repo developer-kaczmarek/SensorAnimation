@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SensorAnimation</string>
+    <string name="app_name">Sensor Animation</string>
 
     <string name="error_positive_action">Понятно</string>
     <string name="error_title">\u0020Произошла ошибка</string>

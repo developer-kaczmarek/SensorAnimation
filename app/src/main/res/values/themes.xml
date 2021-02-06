@@ -20,6 +20,6 @@
     </style>
 
     <style name="PositiveButtonDialogStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
-        <item name="android:textColor">@color/StarViewPrimaryColor</item>
+        <item name="android:textColor">@color/PositiveButtonTextColor</item>
     </style>
 </resources>

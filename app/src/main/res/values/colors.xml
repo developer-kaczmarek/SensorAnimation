@@ -3,4 +3,5 @@
     <color name="PrimaryColor">#FFFFFFFF</color>
     <color name="PrimaryBackgroundColor">#212235</color>
     <color name="StarViewPrimaryColor">#DF0E0E</color>
+    <color name="PositiveButtonTextColor">#DF0E0E</color>
 </resources>

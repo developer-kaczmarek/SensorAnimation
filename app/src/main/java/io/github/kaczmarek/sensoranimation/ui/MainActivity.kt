@@ -30,6 +30,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Метод для демонстранции AlertDialog при получении ошибки
+     * @param description - строкой ресурс для описания в AlertDialog
+     */
     private fun showErrorDialog(@StringRes description: Int) {
         if (errorDialog?.isShowing != true) {
             errorDialog = AlertDialog.Builder(this, R.style.ErrorAlertDialogTheme).apply {
@@ -41,6 +45,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Метод для проверки работоспособности SensorManager и сенсора наклона
+     */
     @Throws(TiltSensorException::class, SensorManagerException::class)
     private fun checkSensorManagerAndTiltSensor() {
         val sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager?
