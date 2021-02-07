@@ -1,8 +1,11 @@
 # Sensor Animation
 
 ## UI
-![UI](https://github.com/developer-kaczmarek/AnimationShadow/blob/master/presentation.gif)
+Демонстрация функционала:
+![UI](https://github.com/developer-kaczmarek/SensorAnimation/blob/master/images/presentation.gif)
 
+Обработка ошибок:
+![UI Error](https://github.com/developer-kaczmarek/SensorAnimation/blob/master/images/m_error_presentation.png)
 
 ### :mortar_board: [Tutorial / Руководство](https://medium.com/s23nyc-tech/geometric-android-animations-using-the-canvas-dd687c43f3f4)
 
